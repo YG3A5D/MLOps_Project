@@ -1,7 +1,7 @@
 FROM centos:latest
 MAINTAINER 2019BTCS088@student.suas.ac.in
 RUM yum install -y httpd \
-zip  \
+zip \
 unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/downloads/page258/loxury.zip  /var/www/html
 WORKDIR /var/www/html
