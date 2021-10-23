@@ -15,7 +15,7 @@
 
 
   - name: Create new deployment
-    command: kubectl apply -f /opt/service.yaml
+    command: kubectl apply -f /opt/deployment.yaml
 
   - name: Create new service
     command: kubectl apply -f /opt/service.yaml
