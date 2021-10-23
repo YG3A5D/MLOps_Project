@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testdeployment
+spec:
+  selector:
+    matchLabels: 
+      apps: testdeployment
+  replicas: 2
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 1
+    
+template:
+  metadata:
+    labels:
+      app: testdeployment
+  specs:
+    containers:
+    - name: testdeployment
+      image: testimage
+      imagePullPolicy: Always
+      ports:
+      - containerPort: 80
