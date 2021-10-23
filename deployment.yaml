@@ -20,7 +20,7 @@ template:
   specs:
     containers:
     - name: testdeployment
-      image: testimage
+      image: testimage/mlops_project
       imagePullPolicy: Always
       ports:
       - containerPort: 80
