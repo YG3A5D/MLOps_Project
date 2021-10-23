@@ -12,3 +12,10 @@
     ansible.builtin.template:
       src: /srv/httpd.j2
       dest: /etc/httpd.conf
+
+
+  - name: Create new deployment
+    command: kubectl apply -f /opt/service.yaml
+
+  - name: Create new service
+    command: kubectl apply -f /opt/service.yaml
